@@ -1,0 +1,451 @@
+@charset 'utf-8';
+/*--- reset ---*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gainsboro;
+}
+
+/*--- css ---*/
+#header {
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    background-color: blue;
+    margin: 0 auto;
+    z-index: 999;
+}
+
+#header .logo {
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translate(-50%,0);
+    width: 50vw;
+    height: 8vh;
+    text-align: center;
+    line-height: 8vh;
+}
+
+#header .logo span {
+    font: bold 8vw 'helvertica';
+    color: white;
+    font-style: oblique;
+    text-align: center;
+    line-height: 8vh;
+}
+
+#content {
+    width: calc(100% - 5vw);
+    padding: 5vh 6vw;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-bottom: 3vh;
+    background-color: white;
+    position: relative;
+}
+
+.news {
+    width: 100%;
+    padding: 10vw 10vh;
+    border-radius: 10px;
+    border: 1px solid black;
+
+}
+
+.news .inner {
+    margin: 60px auto;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.news .inner article .pic {
+    width: 100%;
+    margin-bottom: 5vh;
+}
+
+.news .inner article .pic img {
+    display: block;
+    width: 100%;
+}
+
+.news .inner article h2 {
+    font: bold 6vw/1 'helvetica';
+    color: #444;
+    margin-bottom: 2vh;
+}
+
+.news .inner article p {
+    font: normal 4vw/1.5'helvetica';
+    color: #666;
+    margin-bottom: 2vh;
+    text-align: justify;
+}
+
+.pop1 {
+    position: absolute;
+    top: 60%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 30vw;
+    height: 90vw;
+    background-color: red;
+    z-index: 9;
+}
+
+.pop1 > .closebox {
+    position:absolute;
+    top:0;
+    right:0;
+    width:20px;
+    height: 20px;
+    color:gray;
+    background-color: gainsboro;
+    text-align: center;
+    font-size: 3vw;
+    line-height: 22px;
+}
+
+.pop1 img {
+    width:100vw;
+    height: 100vh;
+}
+.pop1 h2 {
+    position:absolute;
+    padding:5px;
+    top:5vh;
+    width: 100%;
+    color:white;
+    font-size: 7vw;
+    text-align: left;   
+}
+
+.pop1 p {
+    position:absolute;
+    padding:5px;
+    bottom:50px;
+    width:100%;
+    color:yellow;
+    font-size: 2vw;
+    font-style: bold;
+    
+}
+
+.pop1 button {
+    width: 90%;
+    height: 10vw;
+    position: absolute;
+    bottom: 10px;
+    left: 5%;
+    background-color: gainsboro;
+    border-radius: 3vw ;
+    outline: none;
+    font-style: oblique;
+
+}
+
+.pop2 {
+    position: absolute;
+    bottom:30vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50vw;
+    height: 40vw;
+    border-radius: 10px;
+    background-color: purple;
+    overflow:hidden;
+    z-index: 8;
+   
+}
+
+
+.pop img {
+    width:100%;
+    height: 100%;
+}
+
+.pop2 h2 {
+    width: 100%;
+    
+}
+
+.pop2 button {
+    width: 90%;
+    height: 10vw;
+    position: absolute;
+    bottom: 10px;
+    left: 5%;
+    border:inset 3px;
+    background-color: yellow;
+    border-radius: 1vw ;
+    outline: none;
+
+}
+.pop3 {
+    position: fixed;
+    top: 60vh;
+    left: 5vw;
+    z-index: 9;
+}
+
+.pop3 > .popClose {
+    position: absolute;
+    top:-25px;  
+    width:30px;
+    height:30px;
+    background-color:#008039;
+    color:white;
+    border-radius: 50%;
+    z-index: 9; 
+    text-align: center;
+    line-height: 30px;
+}
+
+.pop3 > .popBody {
+    position: fixed;
+    top: 60vh;
+    left: 5vw;
+    width: 45vw;
+    height: 40vw;
+    background-color: white;
+    border:solid 5px ;
+    border-color:#008039;
+    border-radius: 5vw;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.pop3 > .popBody h2 {
+    position:absolute;
+    top:3vh;
+    left:0;
+    width: 100%;
+    z-index: 9;
+    font-size: 4vw;
+    color: blue;
+    text-align: center;
+    
+}
+
+.pop3 > .popBody img {
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-40%);
+    width:95%;
+    z-index: 4;
+
+}
+
+
+.pop3 > .popBody button {
+    width: 90%;
+    height: 10vw;
+    position: absolute;
+    bottom: 1vh;
+    left: 5%;
+    color:black;
+    background-color: orange;
+    border-radius: 3vw ;
+    outline: none;
+    z-index: 5;
+
+}
+
+.pop4 {
+    display: none;
+    position:fixed;
+    top:30vh;
+    left:0;
+    width:90vw;
+    height:30vh;
+    background-color: yellow;
+    border-radius: 10px;
+    border: solid orange 3px;
+    z-index: 8;
+}
+
+.pop4 > .barbie {
+    position:absolute;
+    top:5vh;
+    left:5vw;
+    
+    width:50vw;
+    height: 20vh;
+    overflow: hidden;
+}
+
+.pop4 img{
+
+    position:absolute;
+    top:-10vh;
+    left:-30vw;
+    width:200%;
+    height:300%;
+}
+
+.pop4 h2 {
+    position:absolute;
+    top:1vh;
+    left:0;
+    width:100%;
+    text-align: center;    
+}
+
+.pop4 p {
+    position:absolute;
+    bottom:0.5vh;
+    left:5vw;
+    color:red;
+
+    font-size: 5vw;
+}
+
+.pop4 button {
+    position:absolute;
+    bottom:2vh;
+    right:5vw;
+    width:20vw;
+    height: 5vh;
+    border-style:outset;
+    background-color: orange;
+}
+
+.pop4 > .close {
+    width:15vw;
+    height:3vh;
+    background-color: orange;
+    position:absolute;
+    bottom:-3vh;
+    left:0;
+    text-align: center;
+    padding-top:0.5vh;
+}
+
+.pop5 {
+    display:none;
+    position:absolute;
+    top:80vh;
+    left:10vw;
+    width:60vw;
+    height:30vh;
+    background-color: white;
+    border:solid blue 2px;
+    border-radius: 10px;
+    z-index: 6;
+    overflow: hidden;
+    text-align: center;
+}
+
+.pop5 > .sajoo {
+    position:absolute;
+    top:50%;
+    left:50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+}
+
+.pop5 > .sajoo > h2 {
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    font-style:oblique;
+    color:blue;
+    -webkit-text-stroke:0.2vw yellow;
+    text-shadow: black 1px 0 10px;
+
+    z-index: 7;
+}
+
+.pop5 > .popBody > h4 {
+    margin:10px;
+}
+
+.pop5 > .popBody > p {
+    margin:5px;
+}
+
+
+
+.pop51 {
+    display: none;
+    position:absolute;
+    bottom:40vh;
+    left:30vw;
+    width:60vw;
+    height:30vh;
+    background-color: white;
+    border:solid blue 2px;
+    border-radius: 10px;
+    z-index: 6;
+    overflow: hidden;
+    text-align: center;
+}
+
+.pop51 > .sajoo {
+    position:absolute;
+    top:50%;
+    left:50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+}
+
+.pop51 > .sajoo > h2 {
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    font-style:oblique;
+    color:blue;
+    -webkit-text-stroke:0.2vw yellow;
+    text-shadow: black 1px 0 10px;
+
+    z-index: 7;
+}
+
+.pop51 > .popBody > h4 {
+    margin:10px;
+}
+
+.pop51 > .popBody > p {
+    margin:5px;
+}
+
+
+.morelist {
+    width: 100%;
+    padding: 10vw 10vh;
+    border-radius: 10px;
+    border: 1px solid black;
+
+}
+
+.morelist .inner {
+    margin:5vw  auto;
+    padding:5vw ;
+    width: 100%;
+}
+
+#footer {
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    left:0;
+    right:0;
+    bottom: 0;
+    background-color: blue;
+    z-index:999;
+}
